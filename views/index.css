@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+input[type="text"], input[type="submit"], button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="text"], input[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="text"]:focus, input[type="submit"]:focus, button:focus {
+    outline: none;
+}
+input[type="submit"], button {
+    background-color: #4CAF50;
+    color: white;
+}
+input[type="submit"]:hover, button:hover {
+    background-color: #45a049;
+}
+.form-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+.form-container label {
+    font-weight: bold;
+}
+.form-container input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.table-actions {
+    text-align: right;
+}
+.table-actions button {
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.table-actions button:hover {
+    background-color: #45a049;
+}

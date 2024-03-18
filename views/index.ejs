@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h1>Form Add Customers</h1>
+    <form action="/save" method="post">
+        <table>
+            <tr>
+                <td>
+                    <!-- id -->
+                    <input type="text" id="id" name="id" placeholder="Enter ID"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- name -->
+                    <input type="text" id="name" name="name" placeholder="Enter name"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- email -->
+                    <input type="text" id="email" name="email" placeholder="Enter email"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- address -->
+                    <input type="text" id="address" name="address" placeholder="Enter address"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- total -->
+                    <input type="text" id="total" name="total" placeholder="Enter total"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- id -->
+                    <input type="submit" value="Add"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h1>Table Customers</h1>
+    <form action="/delete" method="post">
+        <table>
+            <tr>
+                <td>Customer ID</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>Total</td>
+                <td>Delete</td>
+                <td>Update</td>
+            </tr>
+            <%customers.forEach(customer => { %>
+                <tr>
+                    <td><%=customer.id%></td>
+                    <td><%=customer.name%></td>
+                    <td><%=customer.email%></td>
+                    <td><%=customer.address%></td>
+                    <td><%=customer.total%></td>
+                    <td>
+                        <input type="checkbox" id="<%=customer.id%>" name="<%=customer.id%>"/>
+                    </td>
+                    <td>
+                        <button type="button" onclick="window.location.href='/edit?id=<%=customer.id%>'">update</button>
+                    </td>
+                </tr>
+            <%}); %>
+        </table>
+        <input type="submit" value="Delete"/>
+    </form>
+</body>
+</html>
